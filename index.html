@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <title>Hcaptcha-bot</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <script src="functions.js"></script>
+
+  <link href="estilos/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body style="background-color:#33ceff;">
+    <div id="todo">
+        <div id="contenido">
+          <center><h1>Hcaptcha Faucet Testing</h1>
+           <div class="contenido">Hola, Test sobre Hcaptcha, en este test trabajaremos para comprobar la veracidad de la empresa hcaptcha, la cual nos ofrece un servicio monetizado de cada 500 captchas 1 dolar el 15 de este mes sera el pago.</div>
+           <br> <br>
+           <br> <br>
+                <form method="POST">
+                    <div class="h-captcha" data-sitekey="f29836cb-e105-411d-842e-d72149ae15d5"></div>
+                    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+                    <input type="button" value="Nueva Tarea" onClick="location.reload();" style="width: 200px; height: 30px; background: #6699FF; color: #ffffff; cursor: pointer; border: 0px;"/>
+                    <br> <br>
+                    <br> <br>
+                    <br> <br>
+                    <div id="countdown"></div>
+<script>
+var end = new Date('06/15/2019 12:00 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days + ' dias, ';
+        document.getElementById('countdown').innerHTML += hours + ' horas, ';
+        document.getElementById('countdown').innerHTML += minutes + ' minutos y ';
+        document.getElementById('countdown').innerHTML += seconds + ' segundos';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
+                  </form></center>
+        </div>
+      </div>
+</body>
+
+</html>

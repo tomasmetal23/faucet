@@ -1,0 +1,15 @@
+#contenedor {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+#contenido {
+    font: 130% sans
+    -serif;
+  }
+
+  h1 {
+    font: oblique bold 120% cursive;
+  }
+
+ 
